@@ -23,6 +23,10 @@ urlpatterns = [
     path('account/', include('account.urls')),
     # path('', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+
+print("hello world")
